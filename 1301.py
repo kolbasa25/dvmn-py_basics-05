@@ -3,7 +3,7 @@ import random
 from faker import Faker
 import file_operations
 
-SKILLS = [
+skills = [
     "Стремительный прыжок",
     "Электрический выстрел",
     "Ледяной удар",
@@ -11,10 +11,10 @@ SKILLS = [
     "Кислотный взгляд",
     "Тайный побег",
     "Ледяной выстрел",
-    "Огненный заряд"
+    "Огненный заряд",
 ]
 
-RUNES = {
+runes = {
     'а': 'а͠', 'б': 'б̋', 'в': 'в͒͠',
     'г': 'г͒͠', 'д': 'д̋', 'е': 'е͠',
     'ё': 'ё͒͠', 'ж': 'ж͒', 'з': 'з̋̋͠',
@@ -37,7 +37,7 @@ RUNES = {
     'Ч': 'Ч̋͠', 'Ш': 'Ш͒͠', 'Щ': 'Щ̋',
     'Ъ': 'Ъ̋͠', 'Ы': 'Ы̋͠', 'Ь': 'Ь̋',
     'Э': 'Э͒͠͠', 'Ю': 'Ю̋͠', 'Я': 'Я̋',
-    ' ': ' '
+    ' ': ' ',
 }
 
 def main():
@@ -59,9 +59,9 @@ def main():
         luck = random.randint(3, 18)
 
         skills_runes = []
-        for skill in SKILLS:
+        for skill in skills:
             new_skill = skill
-            for c, r in RUNES.items():
+            for c, r in runes.items():
                 new_skill = new_skill.replace(c, r)
             skills_runes.append(new_skill)
 
